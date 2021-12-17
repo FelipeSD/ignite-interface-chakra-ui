@@ -6,7 +6,6 @@ export default class MyDocument extends Document {
             <Html lang="en">
                 <Head>
                     <meta name="theme-color" content="#000000" />
-                    <title>World Trip</title>
                     <link rel="shortcut icon" href="earth.png" type="image/x-icon" />
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='' />
