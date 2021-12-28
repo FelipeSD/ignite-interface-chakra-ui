@@ -37,6 +37,7 @@ export function HomeBanner() {
                     {isWide && (
                         <GridItem colSpan={[0, 2]} position="relative">
                             <Image
+                                alt={"airplane"}
                                 w={370}
                                 bottom="-16"
                                 position="absolute"

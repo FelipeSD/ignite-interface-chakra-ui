@@ -16,7 +16,7 @@ export default function Item({
             justify="center"
             flexDir="column"
         >
-            <Image w="20" src={icon} />
+            <Image w="20" src={icon} alt={text} />
             <Text mt="4">{text}</Text>
         </Flex>
     )

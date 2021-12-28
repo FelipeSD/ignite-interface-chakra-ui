@@ -12,6 +12,11 @@ const theme = extendTheme({
                 color: '#47585B'
             }
         }
+    },
+    colors: {
+        yellow: {
+            450: "#FFBA08"
+        }
     }
 })
 

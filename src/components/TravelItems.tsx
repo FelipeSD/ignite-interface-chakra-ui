@@ -1,13 +1,12 @@
 import { HStack } from "@chakra-ui/react";
 import Item from "../shared/Item";
-import Cocktail from "../assets/icons/cocktail.svg";
 
-export default function TravelItems() {
+export function TravelItems() {
     return (
         <HStack
             maxW="container.lg"
             mx="auto"
-            py="16"
+            mt="16"
             px="8"
             spacing="8"
             justify="space-between"
