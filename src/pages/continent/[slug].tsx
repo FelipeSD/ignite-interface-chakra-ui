@@ -1,10 +1,17 @@
 import {Header} from "../../shared/Header";
-import {Box, CheckboxGroup, Flex, Grid, Heading, HStack, Image, Spacer, Text, VStack} from "@chakra-ui/react";
+import {Box, Flex, Grid, Heading, HStack, Image, Spacer, Text, VStack} from "@chakra-ui/react";
 import {ChevronLeftIcon} from "@chakra-ui/icons";
 
+interface CityCardProps {
+    city: string;
+    country: string;
+    flag?: string;
+    image?: string;
+}
+
 interface InfoItemProps {
-    number: number,
-    text?: string
+    number: number;
+    text?: string;
 }
 
 const InfoItem = function ({number, text}: InfoItemProps) {
@@ -24,15 +31,17 @@ const InfoItem = function ({number, text}: InfoItemProps) {
     )
 }
 
-const CityCard = function () {
+const CityCard = function ({city, country, image, flag}: CityCardProps) {
     return (
         <Box
             border={"1px"}
             borderColor={"yellow.450"}
             borderRadius={"5px"}>
             <Image
-                src={"/assets/images/cities/europe/london.jpg"}
+                src={`/assets/images/cities/${image}`}
                 borderTopRadius={"5px"}
+                objectFit={"cover"}
+                h={"150px"}
                 w={"100%"}
                 alt={"london"}/>
             <Flex p={"4"}>
@@ -43,14 +52,14 @@ const CityCard = function () {
                         fontFamily={"Barlow"}
                         fontSize={"1.2rem"}
                         fontWeight={"600"}>
-                        Londres
+                        {city}
                     </Text>
                     <Text
                         fontFamily={"Barlow"}
                         fontSize={"1rem"}
                         color={"gray.500"}
                         fontWeight={"500"}>
-                        Reino Unido
+                        {country}
                     </Text>
                 </VStack>
                 <Spacer/>
@@ -129,11 +138,11 @@ export default function Continent() {
                         "repeat(4, 1fr)"
                     ]}
                     gap={"6"}>
-                    <CityCard />
-                    <CityCard />
-                    <CityCard />
-                    <CityCard />
-                    <CityCard />
+                    <CityCard city={"Londres"} country={"Reino Unido"} image={"europe/london.jpg"}/>
+                    <CityCard city={"Paris"} country={"França"} image={"europe/paris.jpg"}/>
+                    <CityCard city={"Roma"} country={"Itália"} image={"europe/rome.jpg"}/>
+                    <CityCard city={"Praga"} country={"República Tcheca"} image={"europe/praga.jpg"}/>
+                    <CityCard city={"Amsterdã"} country={"Holanda"} image={"europe/amsterda.jpg"}/>
                 </Grid>
             </Box>
         </>
