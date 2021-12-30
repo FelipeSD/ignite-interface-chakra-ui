@@ -1,0 +1,22 @@
+.carousel {
+    :global(.swiper-pagination-bullet-active){
+        background: var(--chakra-colors-yellow-450);
+    }
+
+    :global(.swiper-button-next){
+        color: var(--chakra-colors-yellow-450);
+
+        &::after {
+            font-size: 30px;
+        }
+    }
+
+    :global(.swiper-button-prev){
+        color: var(--chakra-colors-yellow-450);
+
+        &::after {
+            font-size: 30px;
+        }
+
+    }
+}
