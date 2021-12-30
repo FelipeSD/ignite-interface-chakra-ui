@@ -11,15 +11,13 @@ export function CarouselItem({ continent, description, image }: CarouselItemProp
     return (
         <Box
             display="flex"
-            flexDirection="column"
-            alignItems="center"
             justifyContent="center"
             width="100%"
             height="400px"
             bgSize="cover"
             bgImg={`linear-gradient(0deg, rgba(28, 20, 1, 0.35), rgba(28, 20, 1, 0.35)), url(${image});`}
         >
-            <Link href={`continent/${continent.toLowerCase()}`} passHref>
+            <Link href={`/continent/${encodeURI(continent.toLowerCase())}`} passHref>
                 <Box
                     as={"a"}
                     display="flex"
@@ -35,11 +33,9 @@ export function CarouselItem({ continent, description, image }: CarouselItemProp
                         mb={"3"}>
                         {continent}
                     </Heading>
-                    <Text
-                        as="h2"
+                    <Text as="h2"
                         color={"white"}
-                        fontSize={["sm", "lg"]}
-                    >
+                        fontSize={["sm", "lg"]}>
                         {description}
                     </Text>
                 </Box>

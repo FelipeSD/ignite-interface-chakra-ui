@@ -17,32 +17,32 @@ export function Carousel() {
         {
             name: "África",
             description: "O continente da diversidade cultural",
-            image: "assets/images/africa.jpg"
+            image: "/assets/images/continents/africa.jpg"
         },
         {
             name: "Europa",
             description: "O continente mais antigo",
-            image: "assets/images/europe.jpg"
+            image: "/assets/images/continents/europe.jpg"
         },
         {
             name: "América do Sul",
             description: "O continente com maior biodiversidade",
-            image: "assets/images/southamerica.jpg"
+            image: "/assets/images/continents/southamerica.jpg"
         },
         {
             name: "América do Norte",
             description: "O continente da diversão",
-            image: "assets/images/northamerica.jpg"
+            image: "/assets/images/continents/northamerica.jpg"
         },
         {
             name: "Oceania",
             description: "O continente isolado",
-            image: "assets/images/oceania.jpg"
+            image: "/assets/images/continents/oceania.jpg"
         },
         {
             name: "Ásia",
             description: "O continente mais populoso",
-            image: "assets/images/asia.jpg"
+            image: "/assets/images/continents/asia.jpg"
         },
     ];
 
