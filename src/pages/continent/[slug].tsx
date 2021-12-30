@@ -1,6 +1,7 @@
 import {Header} from "../../shared/Header";
 import {Box, Flex, Grid, Heading, HStack, Image, Spacer, Text, VStack} from "@chakra-ui/react";
 import {ChevronLeftIcon} from "@chakra-ui/icons";
+import Flag from "react-flagkit";
 
 interface CityCardProps {
     city: string;
@@ -66,7 +67,11 @@ const CityCard = function ({city, country, image, flag}: CityCardProps) {
                 <Flex
                     justifyContent={"center"}
                     alignItems={"center"}>
-                    <ChevronLeftIcon size={"20"}/>
+                    <Flag
+                        style={{
+                            borderRadius: "12rem",
+                        }}
+                        country={flag} />
                 </Flex>
             </Flex>
         </Box>
@@ -138,11 +143,31 @@ export default function Continent() {
                         "repeat(4, 1fr)"
                     ]}
                     gap={"6"}>
-                    <CityCard city={"Londres"} country={"Reino Unido"} image={"europe/london.jpg"}/>
-                    <CityCard city={"Paris"} country={"França"} image={"europe/paris.jpg"}/>
-                    <CityCard city={"Roma"} country={"Itália"} image={"europe/rome.jpg"}/>
-                    <CityCard city={"Praga"} country={"República Tcheca"} image={"europe/praga.jpg"}/>
-                    <CityCard city={"Amsterdã"} country={"Holanda"} image={"europe/amsterda.jpg"}/>
+                    <CityCard
+                        city={"Londres"}
+                        flag={"GB"}
+                        country={"Reino Unido"}
+                        image={"europe/london.jpg"}/>
+                    <CityCard
+                        city={"Paris"}
+                        country={"França"}
+                        flag={"FR"}
+                        image={"europe/paris.jpg"}/>
+                    <CityCard
+                        city={"Roma"}
+                        flag={"IT"}
+                        country={"Itália"}
+                        image={"europe/rome.jpg"}/>
+                    <CityCard
+                        city={"Praga"}
+                        flag={"CZ"}
+                        country={"República Tcheca"}
+                        image={"europe/praga.jpg"}/>
+                    <CityCard
+                        city={"Amsterdã"}
+                        flag={"NL"}
+                        country={"Holanda"}
+                        image={"europe/amsterda.jpg"}/>
                 </Grid>
             </Box>
         </>
